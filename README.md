@@ -1,39 +1,20 @@
-# Generator napisów cyklicznych.
+# Taśmy.
 
-Generator Napisów Cyklicznych jest programowalnym urządzeniem do generowania napisów. Posiada 26 rejestrów, oznaczonych literami od A do Z. Każdy z nich przechowuje jeden napis. Zbiór poleceń dla generatora jest następujący:
-ZERUJ r
-usunięcie zawartości rejestru r
-WYPISZ r
-wpisanie na ekran zawartości rejestru r oraz znaku nowej linii
-ODWROC r
-odwrócenie kolejności napisu w rejestrze r (z ABCDE dostajemy EDCBA)
-USTAW r napis
-wpisanie do rejestru r napisu napis
-PRZESUN r n
-przeniesienie n początkowych znaków rejestru r na jego koniec; dla A=ABCDEF PRZESUN A 2 spowoduje, że A=CDEFAB
-USUN r n
-usunięcie n początkowych znaków rejestru r
-DOKLEJ r s
-doklejenie zawartości rejestru s na koniec rejestru r; po wykonaniu tej operacji rejestr s jest zerowany
-SKOPIUJ r s
-doklejenie zawartości rejestru s na koniec rejestru r; po wykonaniu tej operacji rejestr s zachowuje pierwotną wartość
-MIESZAJ r s
-wstawienie do rejestru r napisu zawierającego na przemian znaki z r i s, gdy zawartość jednego z rejestrów się skończy, dodajemy tylko znaki z drugiego napisu; po wykonaniu tej operacji rejestr s jest zerowany; np. dla A=ABC i B=123 wykonanie MIESZAJ A B spowoduje, że A=A1B2C3 a B=puste
-r i s oznaczają rejestry (jedną z liter od A do Z), w każdym poleceniu r będzie różne od s. Napisami będą ciągi znaków składające się z liter (dużych i małych), cyfr, nawiasów, podkreślnika (_) lub operatorów +, -, *, /. Zaraz po uruchomieniu wszystkie rejestry przechowują puste napisy. 
+Pewna firma produkuje taśmy z kolejnymi numerkami (dla urzędów pocztowych, banków itp.). Każda taśma jest podzielona na prostokąty z kolejnymi numerami, rozpoczynając od 0. Zaczął się nowy rok i jej klienci uzupełniają zapasy. Każdy z nich przysłał zamówienie w postaci pary a, b, gdzie a to numer początkowy a b to numer końcowy fragmentu taśmy, który jest mu potrzebny. Firma optymalizuje koszty więc chce zużyć jak najmniejszą liczbę taśm.
 
-**Program implementujący Generator Napisów Cyklicznych. -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
+**Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
 
 ---
 
 **Wejście**
 ---
 
-Na wejściu podane będą polecenia dla generatora.
+Na wejściu programu zostanie podana liczba zamówień (nie będzie większa niż 100000) oraz zamówienia w postaci par a b (każde w osobnej linii (0 ≤ a < b < 2000000000).
 
 **Wyjście**
 ---
     
-Na wyjściu należy wypisać kolejne wyniki operacji WYPISZ.
+Na wyjściu należy wypisać minimalną liczbę taśm potrzebnych do zrealizowania zamówienia oraz te zamówienia, których anulowanie zmniejszy liczbę wymaganych taśm. Zamówienia powinny być uporządkowane względem numeru początkowego, oraz numeru końcowego (w przypadku takich samych numerów początkowych).
 
 **Przykłady**
 ---
@@ -41,48 +22,50 @@ Na wyjściu należy wypisać kolejne wyniki operacji WYPISZ.
 
 **Wejście**
 <code>
-USTAW A ABCDEF
-WYPISZ A
-PRZESUN A 2
-WYPISZ A
-USUN A 3
-WYPISZ A
-ODWROC A
-WYPISZ A
-ZERUJ A
-WYPISZ A
-USTAW A 123
-USTAW B 456
-DOKLEJ A B
-WYPISZ A
-USTAW B STUVWXYZ
-MIESZAJ A B
-WYPISZ A
-USTAW A *
-WYPISZ A
-SKOPIUJ B A
-DOKLEJ A B
-WYPISZ A
-SKOPIUJ B A
-DOKLEJ A B
-WYPISZ A
-SKOPIUJ B A
-DOKLEJ A B
-WYPISZ A
+6
+0 10
+1 9
+2 8
+3 7
+4 6
+5 5
 </code>
 
 **Wyjście**
 
 <code>
-ABCDEF
-CDEFAB
-FAB
-BAF
+6
+0 10
+1 9
+2 8
+3 7
+4 6
+5 5
+</code>
 
-123456
-1S2T3U4V5W6XYZ
-*
-**
-****
-********
+---
+
+**Wejście**
+<code>
+10
+0 10
+11 12
+9 12
+8 13
+12 13
+1 2
+3 4
+5 6
+1 3
+4 6
+</code>
+
+**Wyjście**
+
+<code>
+4
+8 13
+9 12
+11 12
+12 13
 </code>
