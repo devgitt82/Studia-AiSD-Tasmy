@@ -60,7 +60,6 @@ Na wyjściu należy wypisać minimalną liczbę taśm potrzebnych do zrealizowan
 </code>
 
 **Wyjście**
-
 <code>
 4
 8 13
