@@ -6,13 +6,13 @@
 > Pewna firma produkuje taśmy z kolejnymi numerkami (dla urzędów pocztowych, banków itp.). Każda taśma jest podzielona na prostokąty z kolejnymi numerami, rozpoczynając od 0. Zaczął się nowy rok i jej klienci uzupełniają zapasy. Każdy z nich przysłał zamówienie w postaci pary a, b, gdzie a to numer początkowy a b to numer końcowy fragmentu taśmy, który jest mu potrzebny. Firma optymalizuje koszty więc chce zużyć jak najmniejszą liczbę taśm.
 
 
-**Wejście**
----
+###Wejście
+
 
 >Na wejściu programu zostanie podana liczba zamówień (nie będzie większa niż 100000) oraz zamówienia w postaci par a b (każde w osobnej linii (0 ≤ a < b < 2000000000).
 
-**Wyjście**
----
+###Wyjście
+
     
 >Na wyjściu należy wypisać minimalną liczbę taśm potrzebnych do zrealizowania zamówienia oraz te zamówienia, których anulowanie zmniejszy liczbę wymaganych taśm. Zamówienia powinny być uporządkowane względem numeru początkowego, oraz numeru końcowego (w przypadku takich samych numerów początkowych).
 
