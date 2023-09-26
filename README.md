@@ -1,8 +1,11 @@
 # Taśmy.
 
+** Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
+---
+
 > Pewna firma produkuje taśmy z kolejnymi numerkami (dla urzędów pocztowych, banków itp.). Każda taśma jest podzielona na prostokąty z kolejnymi numerami, rozpoczynając od 0. Zaczął się nowy rok i jej klienci uzupełniają zapasy. Każdy z nich przysłał zamówienie w postaci pary a, b, gdzie a to numer początkowy a b to numer końcowy fragmentu taśmy, który jest mu potrzebny. Firma optymalizuje koszty więc chce zużyć jak najmniejszą liczbę taśm.
 
-## Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.
+
 
 **Wejście**
 ---
