@@ -10,12 +10,12 @@
 ### Wejście
 
 
->Na wejściu programu zostanie podana liczba zamówień (nie będzie większa niż 100000) oraz zamówienia w postaci par a b (każde w osobnej linii (0 ≤ a < b < 2000000000).
+> Na wejściu programu zostanie podana liczba zamówień (nie będzie większa niż 100000) oraz zamówienia w postaci par a b (każde w osobnej linii (0 ≤ a < b < 2000000000).
 
 ### Wyjście
 
     
-Na wyjściu należy wypisać minimalną liczbę taśm potrzebnych do zrealizowania zamówienia oraz te zamówienia, których anulowanie zmniejszy liczbę wymaganych taśm. Zamówienia powinny być uporządkowane względem numeru początkowego, oraz numeru końcowego (w przypadku takich samych numerów początkowych).
+> Na wyjściu należy wypisać minimalną liczbę taśm potrzebnych do zrealizowania zamówienia oraz te zamówienia, których anulowanie zmniejszy liczbę wymaganych taśm. Zamówienia powinny być uporządkowane względem numeru początkowego, oraz numeru końcowego (w przypadku takich samych numerów początkowych).
 
 **Przykłady**
 ---
